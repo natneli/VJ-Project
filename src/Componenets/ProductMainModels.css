@@ -1,0 +1,14 @@
+/* ProductMainModels.css */
+.product-main-models-container {
+  padding: 20px;
+}
+
+.product-main-models-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-main-models-list {
+  list-style-type: none;
+  padding: 0;
+}

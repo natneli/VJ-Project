@@ -1,0 +1,37 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.buttons-container {
+  display: flex; /* Display buttons horizontally */
+}
+
+.button {
+  width: 250px; /* Set equal width for each button */
+  background-color: rgb(247, 247, 143); /* Set button color to yellow */
+  margin-right: 10px; /* Add spacing between buttons */
+  padding: 8px;
+  cursor: pointer;
+  font-size: 19px;
+  border: none; /* Remove button border */
+  outline: none; /* Remove button outline on focus */
+  text-decoration: none; /* Remove default text decoration */
+  color: #333; /* Set text color */
+}
+
+.button:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.details-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
