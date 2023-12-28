@@ -39,35 +39,45 @@
 
 // export default App;
 
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import ProductMainModels from './ProductMainModels';
-import './Home.css';
+import React, { useState } from "react";
+import "./Home.css"; // Assuming you have a corresponding CSS file for styling
+import { useNavigate } from "react-router-dom";
 
-const Home = ({ buttonData }) => {
+const Home = () => {
+  const [selectedButton, setSelectedButton] = useState(null);
+  const navigate = useNavigate();
+
+  const buttonData = {
+    "Continues Inkjet(CIJ)": "Details about Continues Inkjet(CIJ)",
+    "Laser Marking System": "Details about Laser Marking System",
+    "Thermal Transfer Overprints": "Details about Thermal Transfer Overprints",
+    "Thermal Inkjets": "Details about Thermal Inkjets",
+    "Case Coding": "Details about Case Coding",
+    "Commercial Graphics": "Details about Commercial Graphics",
+  };
+
+  const handleButtonClick = (button) => {
+    setSelectedButton(button);
+    // Navigate to the ProductMainModels page with the selected button as a parameter
+    navigate(`/product-main-models/${encodeURIComponent(button)}`);
+  };
+
   return (
     <div className="home-container">
       <div className="buttons-container">
         {Object.keys(buttonData).map((button) => (
-          <Link
+          <button
             key={button}
-            to={`/product-main-models/${encodeURIComponent(button)}`}
-            className="button"
+            onClick={() => handleButtonClick(button)}
+            className={selectedButton === button ? "active" : ""}
           >
             {button}
-          </Link>
+          </button>
         ))}
       </div>
       <div className="details-container">
-        <Routes>
-          {Object.keys(buttonData).map((button) => (
-            <Route
-              key={button}
-              path={`/product-main-models/${encodeURIComponent(button)}`}
-              element={<ProductMainModels buttonText={buttonData[button]} />}
-            />
-          ))}
-        </Routes>
+        {/* Include the ProductMainModels component */}
+        {selectedButton && <p>{buttonData[selectedButton]}</p>}
       </div>
     </div>
   );

@@ -1,14 +1,19 @@
-/* ProductMainModels.css */
 .product-main-models-container {
+  text-align: left;
   padding: 20px;
 }
 
-.product-main-models-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+.model-container {
+  display: flex;
+  align-items: center;
 }
 
-.product-main-models-list {
-  list-style-type: none;
-  padding: 0;
+.model-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.plus-sign {
+  cursor: pointer;
+  font-size: 24px;
 }

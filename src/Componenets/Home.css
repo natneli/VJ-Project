@@ -1,4 +1,4 @@
-.home-container {
+..home-container {
   display: flex;
   justify-content: space-between;
   margin: 20px;
@@ -8,30 +8,28 @@
   display: flex; /* Display buttons horizontally */
 }
 
-.button {
+button {
   width: 250px; /* Set equal width for each button */
   background-color: rgb(247, 247, 143); /* Set button color to yellow */
   margin-right: 10px; /* Add spacing between buttons */
   padding: 8px;
   cursor: pointer;
   font-size: 19px;
-  border: none; /* Remove button border */
+   border: 1px solid #090909; /* Remove button border */
   outline: none; /* Remove button outline on focus */
-  text-decoration: none; /* Remove default text decoration */
-  color: #333; /* Set text color */
 }
 
-.button:hover {
-  background-color: #f0f0f0; /* Change background color on hover */
+button:last-child {
+  margin-right: 0; /* Remove margin for the last button */
 }
 
-.button.active {
+button.active {
   background-color: #007bff;
-  color: white;
+  color: rgb(13, 13, 13);
 }
 
 .details-container {
   flex: 1;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #090909;
 }
