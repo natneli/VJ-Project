@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './Componenets/Header';
 import Home from './Componenets/Home';
-import ProductMainModels from './Componenets/ProductMainModels';
 
 import {
   BrowserRouter as Router,
@@ -9,7 +8,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import ProductModels from './Componenets/ProductModels';
+import ProductTypesCIJ from './Componenets/ProductTypesCIJ';
+import ProductModelsCIJ from './Componenets/ProductModelsCIJ';
 
 
 function App() {
@@ -20,12 +20,12 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route
-            path="/product-main-models/:selectedButton"
-            element={<ProductMainModels />}
+            path="/product-types-cij/:selectedButton"
+            element={<ProductTypesCIJ />}
           />
           <Route
-            path="/product-models/:selectedButton/:subModel"
-            element={<ProductModels />}
+            path="/product-models-cij/:selectedButton"
+            element={<ProductModelsCIJ />}
           />
         </Routes>
       </Router>

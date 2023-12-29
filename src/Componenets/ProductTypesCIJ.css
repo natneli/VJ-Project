@@ -1,0 +1,62 @@
+.product-types-cij-container {
+  text-align: left;
+  padding: 20px;
+}
+
+.model-container {
+  margin-bottom: 10px;
+}
+
+.model-content {
+  display: flex;
+  align-items: center;
+}
+
+.plus-sign,
+.plus-sign-submodel {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.model-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.submodel-dropdown,
+.content-dropdown {
+  margin-left: 30px;
+}
+
+.submodel-dropdown div,
+.content-dropdown div {
+  cursor: pointer;
+  margin-top: 5px;
+  display: block; /* Change from 'flex' to 'block' */
+  transition: background-color 0.3s;
+}
+
+.submodel-dropdown div:hover,
+.content-dropdown div:hover {
+  background-color: #f5f5f5;
+}
+.plus-sign-content {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.section-dropdown div {
+  cursor: pointer;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  margin-left: 40px;
+}
+
+.section-dropdown div:hover {
+  background-color: #f5f5f5;
+}

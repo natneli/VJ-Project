@@ -59,7 +59,7 @@ const Home = () => {
   const handleButtonClick = (button) => {
     setSelectedButton(button);
     // Navigate to the ProductMainModels page with the selected button as a parameter
-    navigate(`/product-main-models/${encodeURIComponent(button)}`);
+    navigate(`/product-types-cij/${encodeURIComponent(button)}`);
   };
 
   return (

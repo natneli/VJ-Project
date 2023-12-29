@@ -1,0 +1,21 @@
+.product-models-cij-container {
+  text-align: left;
+  padding: 20px;
+}
+
+.sub-model-container {
+  display: flex;
+  align-items: center;
+}
+
+.plus-sign {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.sub-model-text {
+  font-size: 26px;
+}
+
