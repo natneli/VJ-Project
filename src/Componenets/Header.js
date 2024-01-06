@@ -10,21 +10,17 @@ function Header() {
     return (
       <div>
         <div className="header">
-          <img
-            src={logoImage}
-            alt=""
-            className="header__logo"
-          />
+          <img src={logoImage} alt="" className="header__logo" />
           <div className="header__topic">
-            <h1>Videojet Information System</h1>
+            <h2>Videojet Service Information System</h2>
           </div>
           <div className="header__search">
             <input type="text" className="header__searchInput" />
             <SearchIcon className="header__searchIcon" />
-        </div>
-        <div className="header__search__text">
-          <p>Search using Serial No</p>
-        </div>
+          </div>
+          <div>
+            <p className="header__search__text">Search Using Serial No</p>
+          </div>
         </div>
       </div>
     );

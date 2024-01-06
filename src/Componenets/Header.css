@@ -2,7 +2,7 @@
   height: 90px;
   display: flex;
   align-items: center;
-  background-color: #0e0e0e;
+  background-color: #070707;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -28,7 +28,7 @@
   height: 11px;
   padding: 10px;
   border: none;
-  width:300px;
+  width:200px;
   margin-left: 270px;
 }
 
@@ -38,9 +38,9 @@
   color:white;
   margin-left:390px;
 }
-.header__search__text{
-  
-  font-size: 20px;
-  color:white;
-  margin-left:20px;
+.header__search__text {
+  font-size: 16px;
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
 }
