@@ -13,11 +13,12 @@
 }
 
 .plus-sign,
-.plus-sign-submodel {
+.plus-sign-submodel,
+.plus-sign-content,
+.plus-sign-section {
+  font-size: 24px; /* You can adjust the font size to your preference */
+  margin-right: 8px; /* Optional: Add margin for spacing */
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 10px;
 }
 
 .model-text {
@@ -66,4 +67,15 @@
   justify-content: space-between;
   margin-top:100px;
   margin-right:30px;
+}
+.product-types-cij-container {
+  position: relative;
+}
+
+.pdf-viewer-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px; /* Adjust this value as needed */
+  margin-right: 20px; /* Adjust this value as needed */
 }
