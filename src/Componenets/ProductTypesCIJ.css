@@ -15,10 +15,12 @@
 .plus-sign,
 .plus-sign-submodel,
 .plus-sign-content,
-.plus-sign-section {
+.plus-sign-section,
+.plus-sign-subsection {
   font-size: 24px; /* You can adjust the font size to your preference */
   margin-right: 8px; /* Optional: Add margin for spacing */
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .model-text {
@@ -27,12 +29,14 @@
 }
 
 .submodel-dropdown,
-.content-dropdown {
+.content-dropdown,
+.subsection-dropdown { /* Added subsection-dropdown */
   margin-left: 30px;
 }
 
 .submodel-dropdown div,
-.content-dropdown div {
+.content-dropdown div,
+.subsection-dropdown div { /* Added subsection-dropdown div */
   cursor: pointer;
   margin-top: 5px;
   display: block; /* Change from 'flex' to 'block' */
@@ -40,16 +44,20 @@
 }
 
 .submodel-dropdown div:hover,
-.content-dropdown div:hover {
+.content-dropdown div:hover,
+.subsection-dropdown div:hover { /* Added subsection-dropdown div:hover */
   background-color: #f5f5f5;
 }
+
 .plus-sign-content {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   margin-right: 10px;
 }
-.section-dropdown div {
+
+.section-dropdown div,
+.subsection-dropdown div {
   cursor: pointer;
   margin-top: 5px;
   display: flex;
@@ -62,12 +70,17 @@
   background-color: #f5f5f5;
 }
 
+.subsection-dropdown div:hover { /* Added subsection-dropdown div:hover */
+  background-color: #f5f5f5;
+}
+
 .content-container {
   display: flex;
   justify-content: space-between;
-  margin-top:100px;
-  margin-right:30px;
+  margin-top: 100px;
+  margin-right: 30px;
 }
+
 .product-types-cij-container {
   position: relative;
 }
