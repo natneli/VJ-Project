@@ -1183,9 +1183,9 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./ProductTypesCIJ.css";
+import "./ProductTypeCIJ.css";
 
-const ProductTypesCIJ = () => {
+const ProductTypeCIJ = () => {
   const { selectedButton } = useParams();
   const [openSubmodel, setOpenSubmodel] = useState(null);
   const [openContent, setOpenContent] = useState(null);
@@ -1227,6 +1227,8 @@ const ProductTypesCIJ = () => {
     "1000 Line": [
       "Parts Identification",
       "Troubleshooting",
+      "Printer Operation",
+      "Installation",
       "Disassembly and Assembly",
       "Service Manual",
       "Fluid Diagrams",
@@ -1240,6 +1242,8 @@ const ProductTypesCIJ = () => {
     "Pigmented Ink(1000 Line)": [
       "Parts Identification",
       "Troubleshooting",
+      "Printer Operation",
+      "Installation",
       "Disassembly and Assembly",
       "Service Manual",
       "Fluid Diagrams",
@@ -1253,6 +1257,8 @@ const ProductTypesCIJ = () => {
     Simplicity: [
       "Parts Identification",
       "Troubleshooting",
+      "Printer Operation",
+      "Installation",
       "Disassembly and Assembly",
       "Service Manual",
       "Fluid Diagrams",
@@ -1266,7 +1272,9 @@ const ProductTypesCIJ = () => {
   };
 
   const subsections = {
-    Problem3: ["Gutter", "Ink", "Septum"],
+    "Troubleshooting Flowcharts": ["Head Start Diagnostic", "Head Stop Diagnostic", "Ink On Diagnostic","Drooling Printhead", "Gutter Fault", "EHT Fault", "Ink Viscosity Too High","Makeup Consumption"],
+    "Display Faults":["Display Faults Excel Interface","Display Faults Willet Interface"]
+      
     // Add more subproblems as needed
   };
 
@@ -1280,12 +1288,13 @@ const ProductTypesCIJ = () => {
       "Optional Accessories",
       "Tools Kit",
     ],
-    Troubleshooting: [
-      "Problem1",
-      "Problem2",
-      "Problem3",
-      "Problem4",
-      "Problem5",
+    "Troubleshooting": [
+      "Troubleshooting Flowcharts",
+      "Startup Problems",
+      "Display Faults",
+      "Beacon Identification",
+      "Fault Icons",
+      "CSB Test Points"
     ],
     "Disassembly and Assembly": [
       "Printhead",
@@ -1294,13 +1303,15 @@ const ProductTypesCIJ = () => {
       "Umbilical",
       "MainBoard",
     ],
+    "Installation": ["Installation Excel Interface", "Installation Willet Interface" ],
+    "Printer Operation":["Printer Operation Excel Interface", "Printer Operation Willet Interface"],
     "Service Manual": ["Service Manual1", "Service Manual2"],
     "Fluid Diagrams": ["Diagram1", "Diagram2"],
     "Electrical Schematics": ["Schematic1", "Schematics2"],
-    Specification: ["Spec1", "Spec2"],
+    "Specification": ["Spec1", "Spec2"],
     "Service Bulletins": ["Bul1", "Bul2"],
     "Service Software": ["SW1", "SW2", "SW3"],
-    Scratchpads: ["SPS1", "SPS2", "SPS3"],
+    "Scratchpads": ["SPS1", "SPS2", "SPS3"],
     "Maintenance Items": ["M1", "M2", "M3"],
   };
 
@@ -1403,6 +1414,33 @@ fetch(pdfUrl)
 
 
   useEffect(() => {
+    if (openContent && openSection && openSubsection) {
+      // Construct the PDF file name for subsection
+      const pdfName = `${openContent}_${openSection}_${openSubsection}.pdf`;
+
+      // Construct the PDF file URL for subsection
+      const pdfUrl = `${process.env.PUBLIC_URL}/PDF Files/${pdfName}`;
+
+      // Check if the PDF file for subsection exists
+      fetch(pdfUrl)
+        .then((response) => {
+          console.log("PDF Fetch Response:", response);
+          return response.text(); // Log the response text
+        })
+        .then((pdfText) => {
+          console.log("PDF Content:", pdfText); // Log the content of the PDF
+          if (!pdfText) {
+            setPdfUrl(null);
+          } else {
+            setPdfUrl(pdfUrl);
+          }
+        })
+        .catch((error) => {
+          console.error("Error checking PDF existence:", error);
+          setPdfUrl(null);
+        });
+    }
+
     console.log("openSubmodel", openSubmodel);
     console.log("openContent", openContent);
     console.log("openSection", openSection);
@@ -1505,4 +1543,4 @@ fetch(pdfUrl)
   );
 };
 
-export default ProductTypesCIJ;
+export default ProductTypeCIJ;

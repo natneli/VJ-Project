@@ -23,6 +23,20 @@
   font-weight: bolder;
 }
 
+.plus-sign :hover,
+.plus-sign-submodel:hover,
+.plus-sign-content :hover,
+.plus-sign-section:hover,
+.plus-sign-subsection:hover {
+  color:black;
+  font-size:30px;
+  font-weight:900;
+  color: #f5f5f5;
+  background-color: black;
+  padding: 2px;
+  
+}
+
 .model-text {
   font-size: 18px;
   font-weight: bold;
@@ -56,8 +70,8 @@
   margin-right: 10px;
 }
 
-.section-dropdown div,
-.subsection-dropdown div {
+.section-dropdown ,
+.subsection-dropdown {
   cursor: pointer;
   margin-top: 5px;
   display: flex;

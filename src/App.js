@@ -10,10 +10,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import ProductModels from './Componenets/ProductModelsCIJ';
-import ProductTypesCIJ from './Componenets/ProductTypesCIJ';
 import ProductModelsCIJ from './Componenets/ProductModelsCIJ';
 import Login from './Componenets/Login';
 import SignUp from './Componenets/SignUp';
+import ProductTypeCIJ from './Componenets/ProductTypeCIJ';
+import ProductTypeLaser from './Componenets/ProductTypeLaser';
 
 
 function App() {
@@ -27,12 +28,12 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<Home />} />
           <Route
-            path="/product-types-cij/:selectedButton"
-            element={<ProductTypesCIJ />}
+            path="/cij/:selectedButton"
+            element={<ProductTypeCIJ />}
           />
           <Route
-            path="/product-models-cij/:selectedButton"
-            element={<ProductModelsCIJ />}
+            path="/laser/:selectedButton"
+            element={<ProductTypeLaser />}
           />
         </Routes>
       </Router>

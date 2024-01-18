@@ -1,35 +1,72 @@
 .home-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 20vh; /* Adjust the height as needed */
 }
 
 .buttons-container {
-  display: flex; /* Display buttons horizontally */
+  display: flex;
+  flex-direction: row; /* Display buttons horizontally */
+  align-items: center; /* Center buttons vertically */
 }
 
-button {
-  width: 250px; /* Set equal width for each button */
-  background-color: rgb(247, 247, 143); /* Set button color to yellow */
+.button {
+  width: 250px;
+  background-color: #3498db; /* Blue background color */
   margin-right: 10px; /* Add spacing between buttons */
-  padding: 8px;
+  padding: 12px; /* Increase padding for a larger button */
   cursor: pointer;
-  font-size: 19px;
-   border: 1px solid #090909; /* Remove button border */
-  outline: none; /* Remove button outline on focus */
+  font-size: 18px;
+  border: none; /* Remove border */
+  border-radius: 6px; /* Add rounded corners */
+  outline: none;
+  color: #ffffff; /* White text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+  font-weight: bold;
 }
 
-button:last-child {
-  margin-right: 0; /* Remove margin for the last button */
+.button:hover {
+  background-color: #2c3e50; /* Darker background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
-button.active {
-  background-color: #007bff;
-  color: rgb(13, 13, 13);
-}
-
-.details-container {
+.videojet-connect-container {
   flex: 1;
-  padding: 20px;
   border: 1px solid #090909;
+  border-radius: 10px;
+  
+  
+}
+.videojet-connect-container {
+  max-width: 20%;
+  border-radius: 10px;
+  margin-top: 60px;
+  margin-right:20px;
+  display: inline-block;
+}
+
+.videojet-connect-container h2 {
+  font-size: 20px;
+  /* margin-bottom: 10px; */
+}
+
+.videojet-connect-container ul {
+  list-style-type: none;
+  padding: 600px;
+}
+
+.videojet-connect-container li {
+  margin-bottom: 8px;
+}
+
+.videojet-connect-container a {
+  text-decoration: none;
+  color: #007bff; /* Blue color for links */
+  font-weight: bold;
+}
+
+.videojet-connect-container a:hover {
+  text-decoration: underline;
 }
