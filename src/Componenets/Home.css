@@ -6,9 +6,9 @@
 }
 
 .buttons-container {
-  display: flex;
   flex-direction: row; /* Display buttons horizontally */
   align-items: center; /* Center buttons vertically */
+  padding-left: 200px;
 }
 
 .button {
@@ -32,41 +32,67 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
-.videojet-connect-container {
-  flex: 1;
+.videojet-connect-container,
+.appointment-management-container {
+  max-width: 40%;
   border: 1px solid #090909;
   border-radius: 10px;
+  margin-top: 20px;
+  height: 500px;
+ 
+  padding: 16px;
+  background-color: #c7c5c5;
   
   
-}
-.videojet-connect-container {
-  max-width: 20%;
-  border-radius: 10px;
-  margin-top: 60px;
-  margin-right:20px;
-  display: inline-block;
 }
 
-.videojet-connect-container h2 {
+.videojet-connect-container,
+.appointment-management-container {
+  display: inline-flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align items to the start (left) */
+  margin-right: 20px; /* Add some spacing between the containers */
+  height:400px;
+  overflow-y: auto;
+}
+
+.videojet-connect-container h2,
+.appointment-management-container h2 {
   font-size: 20px;
-  /* margin-bottom: 10px; */
-}
-
-.videojet-connect-container ul {
-  list-style-type: none;
-  padding: 600px;
-}
-
-.videojet-connect-container li {
-  margin-bottom: 8px;
-}
-
-.videojet-connect-container a {
-  text-decoration: none;
-  color: #007bff; /* Blue color for links */
-  font-weight: bold;
-}
-
-.videojet-connect-container a:hover {
+  margin: 0; /* Remove default margin */
+  color: black;
   text-decoration: underline;
+  padding-bottom: 10px; /* Adjust as needed */
+}
+
+.videojet-connect-container ul,
+.appointment-management-container ul {
+  list-style-type:disc;
+  
+}
+
+.videojet-connect-container li,
+.appointment-management-container li {
+  margin-top: 8px;
+}
+
+.videojet-connect-container a,
+.appointment-management-container a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  display: block;
+  padding: 2px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.videojet-connect-container a:hover,
+.appointment-management-container a:hover {
+  background-color: #e6f7ff;
+}
+
+.more-info {
+  display: flex;
+  justify-content: space-between; /* Add equal space between containers */
 }

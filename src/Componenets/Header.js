@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import {  Link,Navigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Header.css";
 import logoImage from "../../src/Images/logo-videojet.jpg";
+
+
 
 
 
@@ -10,7 +12,9 @@ function Header() {
     return (
       <div>
         <div className="header">
-          <img src={logoImage} alt="" className="header__logo" />
+          <Link to="/home">
+            <img src={logoImage} alt="" className="header__logo" />
+          </Link>
           <div className="header__topic">
             <h2>Videojet Service Information System</h2>
           </div>
@@ -27,3 +31,5 @@ function Header() {
 }
 
 export default Header
+
+
