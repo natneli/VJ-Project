@@ -12,11 +12,13 @@ function Header() {
     return (
       <div>
         <div className="header">
-          <Link to="/home">
+          <Link to="/Login">
             <img src={logoImage} alt="" className="header__logo" />
           </Link>
           <div className="header__topic">
-            <h2>Videojet Service Information System</h2>
+            <Link to="/Home">
+              <h2>Videojet Service Information System</h2>
+            </Link>
           </div>
           <div className="header__search">
             <input type="text" className="header__searchInput" />

@@ -1193,7 +1193,9 @@ const ProductTypeCIJ = () => {
   const [openSubsection, setOpenSubsection] = useState(null);
   const [pdfUrl, setPdfUrl] = useState(null);
   const [openSubsections, setOpenSubsections] = useState([]);
+  
 
+  
   const submodels = {
     "1000 Line": [
       "1210-1510",
@@ -1210,7 +1212,7 @@ const ProductTypeCIJ = () => {
       "1650-1650 UHS",
     ],
     "Pigmented Ink(1000 Line)": ["1710"],
-    Simplicity: [
+    "Simplicity": [
       "1280",
       "1580",
       "1860",
@@ -1236,7 +1238,6 @@ const ProductTypeCIJ = () => {
       "Specification",
       "Service Bulletins",
       "Service Software",
-      "Scratchpads",
       "Maintenance Items",
     ],
     "Pigmented Ink(1000 Line)": [
@@ -1251,10 +1252,9 @@ const ProductTypeCIJ = () => {
       "Specification",
       "Service Bulletins",
       "Service Software",
-      "Scratchpads",
       "Maintenance Items",
     ],
-    Simplicity: [
+    "Simplicity": [
       "Parts Identification",
       "Troubleshooting",
       "Printer Operation",
@@ -1266,22 +1266,55 @@ const ProductTypeCIJ = () => {
       "Specification",
       "Service Bulletins",
       "Service Software",
-      "Scratchpads",
       "Maintenance Items",
     ],
   };
 
   const subsections = {
-    "Troubleshooting Flowcharts": ["Head Start Diagnostic", "Head Stop Diagnostic", "Ink On Diagnostic","Drooling Printhead", "Gutter Fault", "EHT Fault", "Ink Viscosity Too High","Makeup Consumption"],
-    "Display Faults":["Display Faults Excel Interface","Display Faults Willet Interface"]
-      
-    // Add more subproblems as needed
+    "Electronics Compartment": [
+      "Electronics Compartment",
+      "CSB",
+      "Power Switch",
+      "Electronics Door Assembly",
+      "LCD FIB Assembly",
+      "Power Supply",
+      "EHT Module",
+      "PIB",
+      "Electronics Fan Assembly",
+      "Positive Air Pump",
+      "Connector Panel",
+      "PCB1 PCB2 Assembly",
+    ],
+    "Troubleshooting Flowcharts": [
+      "Head Start Diagnostic",
+      "Head Stop Diagnostic",
+      "Ink On Diagnostic",
+      "Drooling Printhead",
+      "Gutter Fault",
+      "EHT Fault",
+      "Ink Viscosity Too High FC",
+      "Makeup Consumption",
+    ],
+    "Display Faults": [
+      "Display Faults Excel Interface",
+      "Display Faults Willet Interface",
+    ],
+    "Ink Viscosity Too High": [
+      "Viscosity Too High",
+      "Makeup Add Tracking",
+      "Measure Makeup Addition",
+      "Condensor Related",
+      "GPVM Related"
+    ],
+    "Ink and Makeup Add Problems": ["Ink Add Problem", "Makeup Add Problem"],
   };
 
   const sections = {
     "Parts Identification": [
+      "Touch Screen Display",
       "Electronics Compartment",
       "Ink Compartment",
+      "Ink System Simplicity",
       "Printhead",
       "Umbilical",
       "Cables",
@@ -1290,28 +1323,44 @@ const ProductTypeCIJ = () => {
     ],
     "Troubleshooting": [
       "Troubleshooting Flowcharts",
+      "Ink Viscosity Too High",
+      "Ink Viscosity Too Low",
+      "Ink and Makeup Add Problems",
+      "Low Vaccum Problems",
+      "GPVM(1710 Only)",
       "Startup Problems",
+      "Fault Icons",
       "Display Faults",
       "Beacon Identification",
-      "Fault Icons",
-      "CSB Test Points"
+      "CSB Test Points",
+      "Code Related Problems"
     ],
     "Disassembly and Assembly": [
-      "Printhead",
-      "Valve Deck",
+      "Printer Stand",
+      "Printhead Nozzle Deck",
+      "Printhead Valve Deck",
       "Ink Core",
       "Umbilical",
+      "positive Air Pump Kits",
+      "Beacon",
+      "Printer Display",
       "MainBoard",
+      "Codensor"
     ],
-    "Installation": ["Installation Excel Interface", "Installation Willet Interface" ],
-    "Printer Operation":["Printer Operation Excel Interface", "Printer Operation Willet Interface"],
+    "Installation": [
+      "Installation Excel Interface",
+      "Installation Willet Interface",
+    ],
+    "Printer Operation": [
+      "Printer Operation Excel Interface",
+      "Printer Operation Willet Interface",
+    ],
     "Service Manual": ["Service Manual1", "Service Manual2"],
-    "Fluid Diagrams": ["Diagram1", "Diagram2"],
+    "Fluid Diagrams": ["Fluid Diagram"],
     "Electrical Schematics": ["Schematic1", "Schematics2"],
     "Specification": ["Spec1", "Spec2"],
     "Service Bulletins": ["Bul1", "Bul2"],
-    "Service Software": ["SW1", "SW2", "SW3"],
-    "Scratchpads": ["SPS1", "SPS2", "SPS3"],
+    "Service Software": ["SPS Files", "Magicloader", "SW1", "SW2", "SW3"],
     "Maintenance Items": ["M1", "M2", "M3"],
   };
 
@@ -1448,54 +1497,57 @@ fetch(pdfUrl)
   }, [openSubmodel, openContent, openSection, openSubsection]);
 
   return (
-    <div className="product-types-cij-container">
+    <div className="product-type-cij-container">
       <h2>{selectedButton}</h2>
       {Object.keys(submodels).map((model) => (
         <div key={model} className="model-container">
           <div className="model-content">
-            <span
+            <button
               className={`plus-sign ${openSubmodel === model ? "open" : ""}`}
               onClick={() => handleSubmodelClick(model)}
             >
               {openSubmodel === model ? "-" : "+"}
-            </span>
+            </button>
             <span className="model-text">{model}</span>
           </div>
           {openSubmodel === model && (
             <div className="submodel-dropdown">
               {submodels[model].map((subModel) => (
                 <div key={subModel}>
-                  <span
+                  <button
                     className="plus-sign-submodel"
                     onClick={() => handleContentClick(subModel)}
                   >
-                    +
-                  </span>
+                    {openContent === subModel ? "-" : "+"}
+                  </button>
                   {subModel}
                   {openContent === subModel && (
                     <div className="content-dropdown">
                       {contents[model].map((content, index) => (
                         <div key={index}>
-                          <span
+                          <button
                             className="plus-sign-content"
                             onClick={() => handleSectionClick(content)}
                           >
-                            +
-                          </span>
+                            {openSection === content ? "-" : "+"}
+                          </button>
                           {content}
                           {openSection === content && (
                             <div className="section-dropdown">
                               {Array.isArray(sections[content])
                                 ? sections[content].map((section, index) => (
                                     <div key={index}>
-                                      <span
+                                      <button
                                         className="plus-sign-section"
                                         onClick={() =>
                                           handleSectionClick(section)
                                         }
                                       >
-                                        +
-                                      </span>
+                                        {openSection === content &&
+                                        openSubsections.includes(section)
+                                          ? "-"
+                                          : "+"}
+                                      </button>
                                       {section}
                                       {openSubsections.includes(section) &&
                                         subsections[section] && (
@@ -1503,7 +1555,7 @@ fetch(pdfUrl)
                                             {subsections[section].map(
                                               (subsection, index) => (
                                                 <div key={index}>
-                                                  <span
+                                                  <button
                                                     className="plus-sign-subsection"
                                                     onClick={() =>
                                                       handleSubsectionClick(
@@ -1511,8 +1563,11 @@ fetch(pdfUrl)
                                                       )
                                                     }
                                                   >
-                                                    +
-                                                  </span>
+                                                    {openSubsection ===
+                                                    subsection
+                                                      ? "-"
+                                                      : "+"}
+                                                  </button>
                                                   {subsection}
                                                 </div>
                                               )
@@ -1534,10 +1589,18 @@ fetch(pdfUrl)
           )}
         </div>
       ))}
-      {pdfUrl && (
+      {/* {pdfUrl && (
         <div className="pdf-viewer-container">
-          <iframe title="PDF Viewer" src={pdfUrl} width="1300" height="800" />
+          <iframe title="PDF Viewer" src={pdfUrl} width="1100" height="900" />
         </div>
+      )} */}
+      {pdfUrl !== null && (
+        <div className="pdf-viewer-container">
+          <iframe title="PDF Viewer" src={pdfUrl} width="1100" height="900" />
+        </div>
+      )}
+      {pdfUrl === null && (
+        <div className="pdf-not-prepared">Document not yet prepared</div>
       )}
     </div>
   );
