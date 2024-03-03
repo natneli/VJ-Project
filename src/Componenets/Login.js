@@ -96,66 +96,66 @@ function Login() {
         );
     } else {
         return (
-          <div className="container py-5 d-md-flex justify-content-between login_container">
-            <div className="main col-12 col-md-6 me-md-2 p-5 d-flex flex-column justify-content-center">
-              <p className="p1">Videojet Service Information System</p>
-              <p className="p2 text-center">
-                Don't have an account? <br />
-                <Link to="/signup" className="a3">
-                  {" "}
-                  Create a new account
-                </Link>
-              </p>
-              <form onSubmit={handleSubmit}>
-                <input
-                  className="in1"
-                  type="email"
-                  name="user_email"
-                  placeholder="Your Email"
-                  required
-                  autoComplete="new-password"
-                  onChange={handleChange}
-                />
-                <input
-                  className="in1"
-                  type={type}
-                  name="user_password"
-                  placeholder="Your Password"
-                  required
-                  autoComplete="new-password"
-                  onChange={handleChange}
-                />
-                <span className="showHide1">
-                  <Icon
-                    icon={icon}
-                    size={20}
-                    onClick={HandleIconChange}
-                    className="iconss"
-                  />
-                </span>
-                <button className="btn1">submit</button>
-              </form>
-              <Link to="/forgotPass" className="a3 a1">
-                Forgot password ?
-              </Link>
-              <br />
-              <Link to="/signup" className="a3 a1 my-3">
-                Click Here To Create an Account?
-              </Link>
-            </div>
-            <div className="about">
-              <div>
-                <img src={inkDrops} alt="" className="about-image" />
-              </div>
-              <div className="sideNote2 container col-12 col-md-6 ms-md-2">
-                <p className="compInfo">
-                  Videojet coding equipment can print and mark directly on
-                  glass, plastic, metal, flexible film, and fiber-based
-                  materials
+            <div className="container py-5 d-md-flex justify-content-between login_container">
+                <div className="main col-12 col-md-6 me-md-2 p-5 d-flex flex-column justify-content-center">
+                <p className="p1">Videojet Service Information System</p>
+                <p className="p2 text-center">
+                    Don't have an account? <br />
+                    <Link to="/signup" className="a3">
+                    {" "}
+                    Create a new account
+                    </Link>
                 </p>
-              </div>
+                <form onSubmit={handleSubmit}>
+                    <input
+                    className="in1"
+                    type="email"
+                    name="user_email"
+                    placeholder="Your Email"
+                    required
+                    autoComplete="new-password"
+                    onChange={handleChange}
+                    />
+                    <input
+                    className="in1"
+                    type={type}
+                    name="user_password"
+                    placeholder="Your Password"
+                    required
+                    autoComplete="new-password"
+                    onChange={handleChange}
+                    />
+                    <span className="showHide1">
+                    <Icon
+                        icon={icon}
+                        size={20}
+                        onClick={HandleIconChange}
+                        className="iconss"
+                    />
+                    </span>
+                    <button className="btn1">submit</button>
+                </form>
+                <Link to="/forgotPass" className="a3 a1">
+                    Forgot password ?
+                </Link>
+                <br />
+                <Link to="/signup" className="a3 a1 my-3">
+                    Click Here To Create an Account?
+                </Link>
+                </div>
+                <div className="about">
+                <div>
+                    <img src={inkDrops} alt="" className="about-image" />
+                </div>
+                <div className="sideNote2 container col-12 col-md-6 ms-md-2">
+                    <p className="compInfo">
+                    Videojet coding equipment can print and mark directly on
+                    glass, plastic, metal, flexible film, and fiber-based
+                    materials
+                    </p>
+                </div>
+                </div>
             </div>
-          </div>
         );
     }
 }

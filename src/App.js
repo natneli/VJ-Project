@@ -21,7 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/cij/:selectedButton" element={<ProductTypeCIJ />} />
+          <Route path="/ProductTypeCIJ" element={<ProductTypeCIJ />} />
           <Route path="/laser/:selectedButton" element={<ProductTypeLaser />} />
           <Route path="/thermal-transfer/:selectedButton" element={<ProductTypeTTO />} />
           <Route path="/thermal-inkjets/:selectedButton" element={<ProductTypeTIJ />} />

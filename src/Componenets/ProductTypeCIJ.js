@@ -1314,7 +1314,7 @@ const ProductTypeCIJ = () => {
       "Touch Screen Display",
       "Electronics Compartment",
       "Ink Compartment",
-      "Ink System Simplicity",
+      "Ink System (Simplicity)",
       "Printhead",
       "Umbilical",
       "Cables",
@@ -1594,16 +1594,35 @@ fetch(pdfUrl)
           <iframe title="PDF Viewer" src={pdfUrl} width="1100" height="900" />
         </div>
       )} */}
-      {pdfUrl !== null && (
+      {/* {pdfUrl !== null && (
         <div className="pdf-viewer-container">
-          <iframe title="PDF Viewer" src={pdfUrl} width="1100" height="900" />
+          <div className="pdf-iframe">
+            <iframe title="PDF Viewer" src={pdfUrl} width="1100" height="900" />
+          </div>
         </div>
       )}
-      {pdfUrl === null && (
+      {pdfUrl === null && openSubsection !== null && (
         <div className="pdf-not-prepared">Document not yet prepared</div>
+      )} */}
+      {pdfUrl && (
+        <div className="pdf-viewer-container">
+          <object
+            data={pdfUrl}
+            type="application/pdf"
+            width="1100"
+            height="900"
+          >
+            <p>
+              It appears you don't have a PDF plugin for this browser. No
+              biggie... you can{" "}
+              <a href={pdfUrl}>click here to download the PDF file.</a>
+            </p>
+          </object>
+        </div>
       )}
     </div>
   );
 };
 
 export default ProductTypeCIJ;
+
