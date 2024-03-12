@@ -144,16 +144,16 @@ function Login() {
                 </Link>
                 </div>
                 <div className="about">
-                <div>
+                {/* <div>
                     <img src={inkDrops} alt="" className="about-image" />
-                </div>
-                <div className="sideNote2 container col-12 col-md-6 ms-md-2">
+                </div> */}
+                {/* <div className="sideNote2 container col-12 col-md-6 ms-md-2">
                     <p className="compInfo">
                     Videojet coding equipment can print and mark directly on
                     glass, plastic, metal, flexible film, and fiber-based
                     materials
                     </p>
-                </div>
+                </div> */}
                 </div>
             </div>
         );

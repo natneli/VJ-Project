@@ -169,7 +169,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css"; // Assuming you have a corresponding CSS file for styling
-import sampleImage from "../Images/Sample Image1.png";
+// import sampleImage from "../Images/Sample Image1.png";
 
 const Home = () => {
   const buttonData = {
@@ -267,9 +267,9 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div>
+        {/* <div>
           <img src={sampleImage} alt="" className="sample-image" />
-        </div>
+        </div> */}
 
         <div className="videojet-connect-container">
           <h2>Videojet Connect</h2>

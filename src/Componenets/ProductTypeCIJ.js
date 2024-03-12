@@ -1184,6 +1184,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductTypeCIJ.css";
+import { useMediaQuery } from "@mui/material";
 
 const ProductTypeCIJ = () => {
   const { selectedButton } = useParams();
@@ -1604,13 +1605,13 @@ fetch(pdfUrl)
       {pdfUrl === null && openSubsection !== null && (
         <div className="pdf-not-prepared">Document not yet prepared</div>
       )} */}
-      {pdfUrl && (
-        <div className="pdf-viewer-container">
+      {/* {pdfUrl && (
+        <div className="pdf-viewer-container container-fluid">
           <object
             data={pdfUrl}
             type="application/pdf"
-            width="1100"
-            height="900"
+            width="100%"
+            height="100%"
           >
             <p>
               It appears you don't have a PDF plugin for this browser. No
@@ -1619,7 +1620,26 @@ fetch(pdfUrl)
             </p>
           </object>
         </div>
-      )}
+      )} */}
+      {pdfUrl && (
+        <div className="pdf-viewer-container container-fluid">
+          <button className="close-button" onClick={() => setPdfUrl(null)}>
+            Close
+          </button>
+          <object
+            data={pdfUrl}
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <p>
+              It appears you don't have a PDF plugin for this browser. No
+              biggie... you can{" "}
+              <a href={pdfUrl}>click here to download the PDF file.</a>
+            </p>
+          </object>
+        </div>
+      )}{" "}
     </div>
   );
 };
