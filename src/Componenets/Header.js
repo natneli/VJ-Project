@@ -473,15 +473,16 @@ function Header() {
                                       id="menu-item-1832"
                                       className="linkList_arrowNone menu-item menu-item-type-custom menu-item-object-custom menu-item-1832 vj-menu-item-depth-3"
                                     >
-                                      
-                                        <a href="/ProductTypeCIJ">
-                                          <img
-                                            src="https://global.videojet.com/wp-content/uploads/dam/image/misc/icons/cij-icon-small.png?w=70"
-                                            alt="Continuous Inkjet (CIJ)"
-                                          />
-                                          <div>Continuous Inkjet (CIJ)</div>
-                                        </a>
-                                      
+                                      <a
+                                        href="/ProductTypeCIJ"
+                                        onclick="handleNavigation(event)"
+                                      >
+                                        <img
+                                          src="https://global.videojet.com/wp-content/uploads/dam/image/misc/icons/cij-icon-small.png?w=70"
+                                          alt="Continuous Inkjet (CIJ)"
+                                        />
+                                        <div>Continuous Inkjet (CIJ)</div>
+                                      </a>
                                     </li>
 
                                     <li
