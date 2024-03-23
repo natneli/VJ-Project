@@ -10,10 +10,11 @@ import ProductTypeTIJ from "./Componenets/ProductTypeTIJ";
 import ProductTypeCaseCoding from "./Componenets/ProductTypeCaseCoding";
 import ProductTypeGraphics from "./Componenets/ProductTypeGraphics";
 import ProductTypeTTO from "./Componenets/ProductTypeTTO";
+const basename = process.env.REACT_APP_BASENAME || "/";
 
 function App() {
   return (
-    <Router basename="/VJ-Project">
+    <Router basename={basename}>
       <div className="App">
         <Header />
         <Routes>
