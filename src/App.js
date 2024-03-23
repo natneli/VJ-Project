@@ -13,7 +13,7 @@ import ProductTypeTTO from "./Componenets/ProductTypeTTO";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/VJ-Project">
       <div className="App">
         <Header />
         <Routes>
@@ -23,10 +23,22 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/ProductTypeCIJ" element={<ProductTypeCIJ />} />
           <Route path="/laser/:selectedButton" element={<ProductTypeLaser />} />
-          <Route path="/thermal-transfer/:selectedButton" element={<ProductTypeTTO />} />
-          <Route path="/thermal-inkjets/:selectedButton" element={<ProductTypeTIJ />} />
-          <Route path="/case-coding/:selectedButton" element={<ProductTypeCaseCoding />} />
-          <Route path="/commercial-graphics/:selectedButton" element={<ProductTypeGraphics />} />
+          <Route
+            path="/thermal-transfer/:selectedButton"
+            element={<ProductTypeTTO />}
+          />
+          <Route
+            path="/thermal-inkjets/:selectedButton"
+            element={<ProductTypeTIJ />}
+          />
+          <Route
+            path="/case-coding/:selectedButton"
+            element={<ProductTypeCaseCoding />}
+          />
+          <Route
+            path="/commercial-graphics/:selectedButton"
+            element={<ProductTypeGraphics />}
+          />
         </Routes>
       </div>
     </Router>
