@@ -23,11 +23,6 @@
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 767px) {
-  .model-container {
-    display: none; 
-  }
-}
 
 .model-content {
   display: flex;
@@ -150,17 +145,18 @@
 
 /* Mobile devices */
 @media screen and (max-width: 767px) {
+  .model-container {
+    display: none; /* Hide model container */
+  }
+
   .pdf-viewer-container {
     width: 100%;
     height: 100%;
     padding: 0;
     position: absolute;
-    margin-top: 150px;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 9999;
-    
-    
   }
 }
 
