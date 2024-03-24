@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/VJ-Project/static/css/main.fbc77797.css",
+    "main.css": "/VJ-Project/static/css/main.acfb1abc.css",
     "main.js": "/VJ-Project/static/js/main.d70f3a3b.js",
     "static/media/Ink Drops.png": "/VJ-Project/static/media/Ink Drops.a6a378e533c62c01af8c.png",
     "static/media/Case Coding.jpg": "/VJ-Project/static/media/Case Coding.ca05ae6a646a3fb8154b.jpg",
@@ -10,11 +10,11 @@
     "static/media/TTO.webp": "/VJ-Project/static/media/TTO.39c58ef4a3c672b93e63.webp",
     "static/media/Laser.jpg": "/VJ-Project/static/media/Laser.a83f22ca62b84a3292fb.jpg",
     "static/media/Graphics.webp": "/VJ-Project/static/media/Graphics.1293164a353ea44e7206.webp",
-    "main.fbc77797.css.map": "/VJ-Project/static/css/main.fbc77797.css.map",
+    "main.acfb1abc.css.map": "/VJ-Project/static/css/main.acfb1abc.css.map",
     "main.d70f3a3b.js.map": "/VJ-Project/static/js/main.d70f3a3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbc77797.css",
+    "static/css/main.acfb1abc.css",
     "static/js/main.d70f3a3b.js"
   ]
 }
