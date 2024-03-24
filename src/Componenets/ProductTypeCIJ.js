@@ -1195,6 +1195,7 @@ const ProductTypeCIJ = () => {
   const [pdfUrl, setPdfUrl] = useState(null);
   const [openSubsections, setOpenSubsections] = useState([]);
   
+  
 
   
   const submodels = {
