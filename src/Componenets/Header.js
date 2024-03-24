@@ -474,7 +474,7 @@ function Header() {
                                       className="linkList_arrowNone menu-item menu-item-type-custom menu-item-object-custom menu-item-1832 vj-menu-item-depth-3"
                                     >
                                       <a
-                                        href="/ProductTypeCIJ"
+                                        href="#/ProductTypeCIJ"
                                         
                                       >
                                         <img
