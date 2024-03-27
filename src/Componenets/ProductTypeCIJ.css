@@ -159,10 +159,23 @@
   height: 100%;
   padding: 0;
   position: fixed;
-  top: 100px;
-  left: 1;
+  top: 40px;
+  left: 20px;
   z-index: 9999;
+  overflow: auto; /* Enable scrolling if the PDF is larger than the container */
 }
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-object {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure entire PDF page fits within the container */
+}
+
 
 /* Larger screens and tablets */
 @media screen and (min-width: 768px) {

@@ -1792,7 +1792,7 @@ function Header() {
             id="mega-menu-overlay"
             className="mega-menu-overlay hide fadeIn animated"
           ></div>
-          <div className="wp-block-group alignfull has-black-background-color has-background is-layout-constrained wp-block-group-is-layout-constrained">
+          {/* <div className="wp-block-group alignfull has-black-background-color has-background is-layout-constrained wp-block-group-is-layout-constrained">
             <div className="wp-block-group__inner-container">
               <div
                 className="wp-block-videojet-sticky-nav vj-sticky-navs-block-wrapper"
@@ -1807,7 +1807,7 @@ function Header() {
 
               <p></p>
             </div>
-          </div>
+          </div> */}
         </body>
       </div>
     );
