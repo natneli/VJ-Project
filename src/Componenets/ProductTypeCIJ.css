@@ -182,7 +182,7 @@
   .pdf-viewer-container {
     margin: 100px auto; /* Center the container horizontally */
     max-width: 70%; /* Limit the width on larger screens */
-    
+    overflow:auto;
   }
 }
 
@@ -192,6 +192,7 @@
     margin: 50px auto; /* Center the container horizontally */
     max-width: 90%; /* Limit the width on mobile devices */
     margin-top:100px;
+    overflow:auto;
   }
 }
 
