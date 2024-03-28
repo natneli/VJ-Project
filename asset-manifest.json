@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/VJ-Project/static/css/main.fe1f057f.css",
+    "main.css": "/VJ-Project/static/css/main.d09bd60a.css",
     "main.js": "/VJ-Project/static/js/main.d37b301a.js",
     "static/media/Ink Drops.png": "/VJ-Project/static/media/Ink Drops.a6a378e533c62c01af8c.png",
     "static/media/Case Coding.jpg": "/VJ-Project/static/media/Case Coding.ca05ae6a646a3fb8154b.jpg",
     "static/media/logo-videojet.jpg": "/VJ-Project/static/media/logo-videojet.13b2d6aa043a54055329.jpg",
-    "static/media/TIJ.jpg": "/VJ-Project/static/media/TIJ.9a34b01b597fac3b711f.jpg",
     "index.html": "/VJ-Project/index.html",
+    "static/media/TIJ.jpg": "/VJ-Project/static/media/TIJ.9a34b01b597fac3b711f.jpg",
     "static/media/TTO.webp": "/VJ-Project/static/media/TTO.39c58ef4a3c672b93e63.webp",
     "static/media/Laser.jpg": "/VJ-Project/static/media/Laser.a83f22ca62b84a3292fb.jpg",
     "static/media/Graphics.webp": "/VJ-Project/static/media/Graphics.1293164a353ea44e7206.webp",
-    "main.fe1f057f.css.map": "/VJ-Project/static/css/main.fe1f057f.css.map",
+    "main.d09bd60a.css.map": "/VJ-Project/static/css/main.d09bd60a.css.map",
     "main.d37b301a.js.map": "/VJ-Project/static/js/main.d37b301a.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe1f057f.css",
+    "static/css/main.d09bd60a.css",
     "static/js/main.d37b301a.js"
   ]
 }
