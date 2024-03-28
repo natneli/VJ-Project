@@ -168,6 +168,7 @@
   left: 20px;
   z-index: 9999;
   overflow: auto; /* Enable scrolling if the PDF is larger than the container */
+  -webkit-overflow-scrolling: touch;
 }
 
 .pdf-iframe {
